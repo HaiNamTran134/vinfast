@@ -1,0 +1,225 @@
+@use "../../../scss/" as *;
+
+.blog {
+  margin-top: 7rem;
+}
+
+.post {
+  // padding: 2rem;
+
+  &__test {
+    width: 36.9rem;
+    margin-bottom: 2rem;
+  }
+
+  &__image {
+    overflow: hidden;
+    position: relative;
+    .img {
+      width: 100%;
+      height: 20.5rem;
+      object-fit: cover;
+      transition: 0.3s;
+    }
+
+    &:hover {
+      .img {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  &__footer {
+    margin-top: -5px;
+    padding: 1rem;
+    height: 10rem;
+    border: 1px solid #ccc;
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+  }
+
+  &__name {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  &__published {
+    margin-left: 5px;
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+
+  &__title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    font-style: normal;
+    margin-top: 6px;
+    height: 4.2rem;
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+  }
+
+  &:hover {
+    .post__published,
+    .post__title,
+    .post__name {
+      color: $black;
+    }
+  }
+}
+
+.count {
+  font-size: 2rem;
+  margin-left: 5px;
+}
+
+.blog__detail {
+  margin-top: 7rem;
+  .username {
+    font-size: 1.6rem;
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  &__left {
+    margin-right: 6rem;
+    position: sticky;
+    top: 9rem;
+    &__username {
+      padding: 1.5rem 0;
+      border-bottom: 1px solid;
+    }
+
+    &__reaction {
+      @include flex(center, space-between);
+      margin-top: 2rem;
+
+      .reaction {
+        @include flex(start, space-between);
+        color: #707070;
+
+        &:hover {
+          cursor: pointer;
+          color: $black;
+        }
+
+        svg {
+          width: 2.5rem;
+        }
+      }
+    }
+  }
+
+  &__title {
+    font-size: 4rem;
+    font-weight: 700;
+    color: $black;
+    margin: 1rem 0;
+  }
+
+  &__header {
+    @include flex(center, space-between);
+    &--left {
+      .date {
+        font-size: 1.4rem;
+        margin-top: 5px;
+      }
+    }
+
+    &--right {
+      svg {
+        width: 1.7rem;
+        opacity: 0.6;
+        transition: all 0.3s ease;
+
+        &:hover {
+          opacity: 1;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  &__content {
+    margin-top: 4rem;
+    font-size: 1.3rem;
+    line-height: 2.4rem;
+  }
+
+  &__comment {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 999;
+
+    .comment {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 72rem;
+      background: $white;
+      box-shadow: $box-shadow;
+      transform: translate(72rem);
+      animation-name: commentActive;
+      animation-duration: 0.4s;
+
+      &__close {
+        position: absolute;
+        right: 2rem;
+        top: 2rem;
+        width: 2rem;
+
+        &:hover {
+          color: #333;
+          cursor: pointer;
+        }
+      }
+
+      &__content {
+        margin-top: 6rem;
+        padding: 0 4rem 6rem;
+        width: 100%;
+        .count {
+          font-weight: 600;
+          margin-bottom: 5rem;
+          p {
+            display: inline-block;
+            margin-left: 5px;
+          }
+        }
+      }
+
+      &__detail {
+        margin-top: 3rem;
+      }
+    }
+  }
+}
+
+.blog__detail__comment.active {
+  .comment {
+    transform: translate(0);
+  }
+}
+
+@keyframes commentActive {
+  from {
+    transform: translateX(72rem);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}

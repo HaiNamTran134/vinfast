@@ -1,0 +1,43 @@
+@use "../../../scss/" as *;
+
+#president-06 {
+  .president__wrap {
+    position: relative;
+    height: 74rem;
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+
+    &__info {
+      position: absolute;
+      width: 100%;
+      bottom: 12%;
+      z-index: 1;
+
+      .name {
+        font-size: 4rem;
+        font-weight: 200;
+        line-height: 3rem;
+        font-style: normal;
+        color: #fff;
+        letter-spacing: 1rem;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 20rem;
+      }
+
+      .group__button {
+        left: 40%;
+        border: 2px solid $white;
+        bottom: 54%;
+        color: #fff;
+
+        a {
+          color: $white;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+@use "../../../scss/" as *;
+
+.four__easy {
+  height: 47.4rem;
+  background-image: url("http://localhost:3000/images/four-easy.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+
+  .title {
+    font-size: 3.6rem;
+    font-weight: 200;
+    font-style: normal;
+    line-height: 150%;
+    letter-spacing: 4px;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+    color: $white;
+  }
+
+  .container {
+    background: $white;
+    height: 25rem;
+
+    .row {
+      height: 100%;
+      align-items: center;
+
+      .desc {
+        margin-top: 1rem;
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          top: -8rem;
+          right: -2rem;
+          width: 2.5rem;
+          height: 2.5rem;
+          background-image: url("http://localhost:3000/images/arrow.svg");
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+        span {
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,106 @@
+@use "../../../scss/" as *;
+
+thead {
+  background-color: $second-bg;
+}
+
+tr {
+  text-align: center;
+}
+
+th,
+td {
+  text-transform: capitalize;
+  padding: 1.5rem 1rem;
+  border-bottom: 1px solid #ccc;
+
+  img {
+    width: 8rem;
+  }
+}
+
+tbody > tr:hover {
+  background-color: #fafafb;
+  a {
+    cursor: pointer;
+    // padding: 1rem;
+  }
+}
+
+td {
+  .action {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: $blue;
+    margin-left: 4px;
+  }
+
+  i {
+    font-size: 12px;
+    color: $blue;
+  }
+}
+
+table {
+  width: 100%;
+  min-width: 30rem;
+  border-spacing: 0;
+}
+
+.table-wrapper {
+  overflow-y: auto;
+}
+
+.table__pagination {
+  width: 100%;
+  margin-top: 2rem;
+
+  @include flex(center, flex-end);
+
+  &-item ~ item {
+    margin-left: 1rem;
+  }
+
+  &-item {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    cursor: pointer;
+
+    @include flex(center, center);
+
+    &.active,
+    .active:hover {
+      background-color: $main-color;
+      color: $white;
+      font-weight: 600;
+    }
+
+    &:hover {
+      color: $white;
+      background-color: $second-color;
+    }
+  }
+}
+
+.page-header--product {
+  @include flex(center, space-between);
+}
+
+.productAddButton {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 1rem;
+  border: none;
+  border-radius: $border-radius;
+  background: $blue;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: $white;
+  text-transform: uppercase;
+
+  a:hover {
+    color: $white;
+  }
+}

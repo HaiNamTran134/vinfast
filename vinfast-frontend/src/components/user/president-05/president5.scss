@@ -1,0 +1,78 @@
+@use "../../../scss/" as *;
+
+#president-05 {
+  background-color: #dbe1e3;
+  padding: 6rem;
+  .president__wrap {
+    @include flex(unset, unset);
+    &__left {
+      flex: 0 0 50%;
+      max-width: 50%;
+      margin-top: 8rem;
+      .container {
+        max-width: 50rem;
+
+        .selectCarVersion {
+          @include flex(center, space-between);
+          li {
+            padding: 1.6rem 4rem;
+            font-size: 1.4rem;
+            font-weight: 600;
+            font-style: normal;
+            line-height: 2rem;
+            border: 1px solid $blue;
+            border-radius: $border-radius;
+            text-transform: uppercase;
+            color: $blue;
+            transition: 0.3s all ease;
+
+            &:hover {
+              color: $white;
+              background-color: $blue;
+              cursor: pointer;
+            }
+          }
+        }
+
+        ul.list__parameters {
+          margin-top: 2rem;
+
+          li {
+            position: relative;
+            font-size: 1.3rem;
+            padding: 2rem;
+
+            span.top {
+              display: block;
+              font-weight: 600;
+            }
+
+            &::before {
+              content: "";
+              position: absolute;
+              bottom: 0;
+              height: 1px;
+              width: 5rem;
+              background-color: #707070;
+            }
+          }
+        }
+      }
+    }
+
+    &__right {
+      flex: 0 0 50%;
+      max-width: 50%;
+      img {
+        height: auto;
+        width: 94%;
+        margin-top: 18rem;
+      }
+
+      //   .group__button {
+      //     left: 0;
+      //     bottom: -2rem;
+      //   }
+    }
+  }
+}

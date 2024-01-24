@@ -1,0 +1,21 @@
+@use "../../../scss/" as *;
+.block2 {
+  margin-top: 8rem;
+}
+
+.block2__title {
+  margin-bottom: 5rem;
+}
+
+.block2__title h2 {
+  font-size: 54px;
+  font-weight: 200;
+  line-height: 70px;
+  text-align: center;
+}
+
+.block2__item {
+  max-width: 387px;
+  margin: auto;
+}
+/*# sourceMappingURL=block2.css.map */

@@ -1,0 +1,108 @@
+@use "../../../scss/" as *;
+
+#president-02 {
+  background-color: #f8f8f8;
+  .president__wrap {
+    img {
+      position: relative;
+      max-height: 500px;
+      width: auto;
+      margin: 0 auto;
+      display: block;
+    }
+
+    &__info {
+      position: unset;
+      padding-top: 6rem;
+      &--group {
+        .parameter {
+          color: $black;
+          &::before {
+            background-color: #707070;
+          }
+        }
+      }
+
+      .img:before {
+        position: absolute;
+        bottom: 41%;
+        left: 0;
+        width: 100%;
+        height: 1rem;
+        content: "";
+        background: linear-gradient(90deg, $white 0.01%, $blue 100.01%);
+        transform: matrix(-1, 0, 0, 1, 0, 0);
+        z-index: 0;
+
+        @include mobile-xs {
+          bottom: 59%;
+        }
+
+        @include pc {
+          bottom: 41%;
+        }
+      }
+
+      &--color {
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 127%;
+        color: $black;
+        text-transform: uppercase;
+        padding-right: 3rem;
+
+        @include mobile-xs {
+          padding: 0;
+          position: unset;
+          max-width: 240px;
+          margin: 0 auto;
+          text-align: center;
+        }
+
+        @include tablet-md {
+          position: absolute;
+          top: 18%;
+          right: 28rem;
+          max-width: 300px;
+          margin: 0 auto;
+          text-align: center;
+        }
+
+        @include pc {
+          top: 25%;
+          right: 5rem;
+          width: 12rem;
+          text-align: unset;
+        }
+
+        ul {
+          display: flex;
+          flex-wrap: wrap;
+          li {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            margin: 5px 1rem 5px 0;
+            position: relative;
+
+            &:hover {
+              cursor: pointer;
+            }
+
+            &.active::before {
+              content: "";
+              position: absolute;
+              top: -4px;
+              right: -4px;
+              bottom: -4px;
+              left: -4px;
+              border-radius: 50%;
+              border: 1px solid;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}

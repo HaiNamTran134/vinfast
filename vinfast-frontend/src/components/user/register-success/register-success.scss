@@ -1,0 +1,60 @@
+@use "../../../scss/" as *;
+
+#register__success {
+  display: none;
+  max-width: 36.6rem;
+  height: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  background: $white;
+  border-radius: 3px;
+  padding: 30px;
+
+  .close__form {
+    cursor: pointer;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+
+  .logo {
+    background: url(../../../assets/logo-header.svg) 0 0 no-repeat;
+    width: 80px;
+    height: 80px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .desc-1 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.2rem;
+    line-height: 2.8rem;
+    color: $blue;
+    margin: 4rem 0 3rem;
+  }
+
+  .desc-2 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 150%;
+    color: $black;
+  }
+
+  .hotline {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 150%;
+    color: $black;
+    margin-top: 3rem;
+  }
+}
+
+#register__success.showForm {
+  display: block;
+}

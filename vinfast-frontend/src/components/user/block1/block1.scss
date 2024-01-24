@@ -1,0 +1,130 @@
+@use "../../../scss/" as *;
+
+.block__trangchu {
+  background-image: url("http://localhost:3000/images/home_bg_top.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.block1 {
+  @include mobile-xs {
+    margin-top: 0;
+  }
+
+  @include tablet-md {
+    margin-top: 8rem;
+  }
+
+  &__item {
+    position: relative;
+
+    @include mobile-xs {
+      width: 100%;
+      border-top: 1px solid $white;
+    }
+
+    @include tablet-md {
+      width: 680px;
+      margin: 0 auto;
+    }
+
+    @include tablet-lg {
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    &__image {
+      height: auto;
+      position: relative;
+      z-index: -1;
+    }
+
+    &__info {
+      @include mobile-xs {
+        position: unset;
+        width: 98%;
+        margin: -3rem auto 0;
+        background: linear-gradient(180deg, #ffffff 0%, #eeeeee 100%), #eeeeee;
+      }
+
+      @include tablet-lg {
+        position: absolute;
+        top: 6rem;
+        right: 3.8rem;
+        width: 30%;
+        min-width: 36.5rem;
+
+        background-color: $white;
+      }
+
+      height: calc(100% - 6.4rem);
+      padding: 5rem 3rem;
+      color: $black;
+      border-radius: 3px;
+
+      &--title {
+        font-size: 2.4rem;
+        font-weight: 600;
+        line-height: 2.8rem;
+      }
+
+      &--description {
+        margin-top: 2rem;
+        font-size: 15px;
+        font-weight: 200;
+      }
+    }
+  }
+  .swiper-pagination {
+    text-align: unset;
+    @include flex(center, unset);
+  }
+
+  .swiper-pagination-fraction,
+  .swiper-pagination-custom,
+  .swiper-container-horizontal > .swiper-pagination-bullets {
+    width: 365px;
+
+    @include mobile-xs {
+      bottom: 8%;
+      left: 30%;
+    }
+
+    @include tablet-md {
+      bottom: 6%;
+      left: 40%;
+    }
+
+    @include tablet-lg {
+      bottom: 15%;
+      left: 70%;
+    }
+  }
+
+  .swiper-pagination-bullet {
+    opacity: 1;
+  }
+
+  .swiper-container-horizontal
+    > .swiper-pagination-bullets
+    .swiper-pagination-bullet {
+    margin-right: 2rem;
+  }
+
+  .swiper-pagination-bullet-active {
+    position: relative;
+  }
+
+  .swiper-pagination-bullet-active::before {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border: 1px solid $blue;
+    border-radius: 50%;
+    color: $blue;
+    top: -3px;
+    right: -3px;
+  }
+}

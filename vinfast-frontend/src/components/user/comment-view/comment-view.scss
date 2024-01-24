@@ -1,0 +1,121 @@
+@use "../../../scss/" as *;
+
+.comments {
+  margin-top: 2rem;
+
+  &__avatar {
+    margin-right: 1rem;
+    margin-top: 3px;
+
+    img {
+      max-width: 4rem;
+      border-radius: 50%;
+    }
+  }
+
+  &__arthor {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+
+  &__text {
+    font-size: 1.3rem;
+  }
+}
+
+.comments__container {
+  position: absolute;
+  top: 25rem;
+  bottom: 0;
+  padding-right: 4rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 680px;
+
+  &__detail {
+    @include flex(unset, flex-start);
+    margin-bottom: 2rem;
+  }
+
+  &__content {
+    padding: 1.3rem;
+    background: #ccc;
+    border-radius: 2rem;
+  }
+}
+
+.comment__form {
+  position: relative;
+
+  img {
+    position: absolute;
+    left: -4px;
+    top: -6px;
+    width: 4rem;
+    border-radius: 50%;
+  }
+
+  &__action {
+    text-align: end;
+    margin-top: 1rem;
+    button {
+      outline: none;
+      border: none;
+      font-size: 1.4rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding: 8px 1.5rem;
+      border-radius: 2rem;
+      margin-left: 1rem;
+
+      &.cancel {
+        color: #888888;
+
+        &:hover {
+          cursor: pointer;
+          color: #777;
+          background: #ebebeb;
+          opacity: 0.8;
+        }
+      }
+
+      &.send-up {
+        background: #ccc;
+        color: #fff;
+
+        &.active {
+          background: #f05123;
+          &:hover {
+            cursor: pointer;
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+  }
+}
+
+.comment__form__text {
+  width: calc(100% - 4.2rem);
+  height: 3rem;
+  border-bottom: 1px solid #ccc;
+  margin-left: 4.2rem;
+  padding-bottom: 4px;
+  outline: none;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  position: relative;
+
+  &.active {
+    &::before {
+      content: none;
+    }
+  }
+
+  &:focus {
+    border-bottom: 1px solid #ccc;
+    padding-left: 2px;
+    padding-top: 2px;
+  }
+}

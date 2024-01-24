@@ -1,0 +1,52 @@
+@use "../../../scss/" as *;
+
+.product__detail {
+  padding: 5px;
+
+  .row {
+    align-items: center;
+  }
+
+  .name-img {
+    @include flex(unset, flex-start);
+    padding: 0 2rem;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+
+    img {
+      width: 8rem;
+    }
+  }
+
+  .product__status {
+    padding-left: 1rem;
+  }
+
+  .button {
+    padding-left: 1rem;
+    button {
+      border: navajowhite;
+      font-size: 1.1rem;
+      color: #707070;
+      text-decoration: underline;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .detail {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.3rem;
+    line-height: 140.4%;
+    text-align: center;
+    color: $black;
+    margin: 0 auto;
+
+    a {
+      padding: 1rem 2rem;
+    }
+  }
+}

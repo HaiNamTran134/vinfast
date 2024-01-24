@@ -1,0 +1,56 @@
+@use "../../../scss/" as *;
+
+.not__found {
+  text-align: center;
+  padding: 12rem;
+  height: 100%;
+  overflow: hidden;
+  &__error {
+    background-image: url("http://localhost:3000/images/ccgradient.24a9b0fc.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50%;
+    -webkit-mask-image: url("http://localhost:3000/images/404.4aeac892.svg");
+    mask-image: url("http://localhost:3000/images/404.4aeac892.svg");
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: auto;
+    mask-size: auto;
+    height: 200px;
+    width: 100%;
+    display: block;
+  }
+
+  &__title {
+    font-size: 4.5rem;
+    font-weight: 900;
+    line-height: 140%;
+    margin-bottom: 2rem;
+  }
+
+  li {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 140%;
+    padding: 1rem;
+  }
+
+  p {
+    margin-top: 5rem;
+
+    a {
+      padding: 1.5rem 3rem;
+      font-size: 1.6rem;
+      font-weight: 600;
+      background: #f05123;
+      border-radius: 3.5rem;
+      color: $white;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

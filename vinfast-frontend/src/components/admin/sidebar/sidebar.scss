@@ -1,0 +1,53 @@
+@use "../../../scss/" as *;
+
+.sidebar {
+  min-width: $sidebar-width;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: $main-bg;
+  box-shadow: $box-shadow;
+
+  &__logo {
+    height: 150px;
+
+    &:hover {
+      cursor: pointer;
+    }
+    @include flex(center, center);
+
+    img {
+      height: 10rem;
+    }
+  }
+
+  &__item {
+    padding: 0 2rem;
+
+    &-inner {
+      padding: 1.5rem 2.5rem;
+      font-weight: 600;
+      transition: color 0.3s ease 0s;
+
+      @include flex(center, flex-start);
+
+      i {
+        margin-right: 1rem;
+        font-size: 1.5rem;
+      }
+
+      span {
+        text-transform: capitalize;
+        font-size: 1.5rem;
+      }
+
+      &.active {
+        border-radius: 30px;
+        // background-image: linear-gradient(to right, $main-color, $second-color);
+        background-color: $blue;
+        color: $white;
+      }
+    }
+  }
+}

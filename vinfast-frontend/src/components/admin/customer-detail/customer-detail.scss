@@ -1,0 +1,91 @@
+@use "../../../scss/" as *;
+
+.head {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.body {
+  font-size: 13px;
+}
+
+.customer__detail {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: auto;
+  width: 50rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #fff;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  height: calc(100% - 3rem);
+  z-index: 100;
+
+  transform: translate(0);
+  animation-name: commentActive;
+  animation-duration: 0.4s;
+
+  &__header {
+    @include flex(center, space-between);
+    .close {
+      width: 2rem;
+      height: auto;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__content {
+    margin-top: 5rem;
+    .row {
+      margin: 0;
+
+      .l-6 {
+        padding: 5px;
+        .wrapper {
+          min-height: 7.5rem;
+          border-bottom: 1px solid #ccc;
+        }
+      }
+    }
+  }
+
+  &__status {
+    @include flex(center, space-between);
+
+    padding: 0 5px;
+    margin-top: 3rem;
+
+    .button {
+      border-radius: 1.5rem;
+      border: 1px solid $blue;
+      color: $blue;
+      text-transform: uppercase;
+
+      span {
+        @include flex(center, center);
+        padding: 5px 1rem;
+
+        svg {
+          width: 4rem;
+          height: 4rem;
+          fill: currentColor;
+          display: inline-block;
+          font-size: 1.5rem;
+          transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+          flex-shrink: 0;
+          user-select: none;
+        }
+      }
+
+      &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+      }
+    }
+  }
+}

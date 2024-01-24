@@ -1,0 +1,78 @@
+@use "../../../scss/" as *;
+
+.topnav {
+  padding: 3rem;
+  height: $topnav-height;
+  @include flex(center, flex-end);
+
+  &__search {
+    position: relative;
+    height: 5rem;
+    background-color: $main-bg;
+    box-shadow: $box-shadow;
+    border-radius: 3rem;
+    overflow: hidden;
+
+    @include flex(center, unset);
+
+    input {
+      height: 100%;
+      width: 100%;
+      padding: 1rem 6rem 1rem 2rem;
+      font-size: 1.4rem;
+      border-radius: 3rem;
+      color: $txt-color;
+      background-color: $main-bg;
+    }
+
+    i {
+      font-size: 2rem;
+      position: absolute;
+      right: 2rem;
+    }
+  }
+
+  &__right {
+    @include flex(center, space-between);
+    min-width: 20rem;
+
+    &-item ~ item {
+      margin-left: 3rem;
+    }
+
+    &-user {
+      @include flex(center, unset);
+
+      &__image {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 1rem;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      &__name {
+        font-size: 1.4rem;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.notification-item {
+  @include flex(center, unset);
+  padding: 2rem;
+
+  &:hover {
+    background-color: $second-bg;
+  }
+
+  i {
+    margin-right: 2rem;
+    font-size: 1.8rem;
+  }
+}

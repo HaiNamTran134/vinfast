@@ -1,0 +1,44 @@
+@use "../../../scss/" as *;
+
+.policy__power {
+  padding-bottom: 5rem;
+  background: #fbfbfb;
+  .title {
+    font-size: 3.6rem;
+    font-weight: 200;
+    font-style: normal;
+    line-height: 150%;
+    letter-spacing: 4px;
+    padding-top: 5rem;
+  }
+
+  .desc {
+    font-size: 15px;
+    max-width: 70rem;
+    margin: 0 auto;
+  }
+
+  .img {
+    width: 776px;
+    height: auto;
+    margin: 3rem auto 0;
+  }
+
+  .btn {
+    button {
+      margin-top: 3rem;
+      padding: 1.4rem 12rem;
+      font-size: 14px;
+      text-transform: uppercase;
+      background: $blue;
+      color: #fff;
+      border: none;
+      border-radius: $border-radius;
+
+      &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+      }
+    }
+  }
+}

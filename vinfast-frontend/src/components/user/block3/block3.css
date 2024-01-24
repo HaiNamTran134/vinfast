@@ -1,0 +1,50 @@
+@use "../../../scss/" as *;
+.info__body {
+  padding: 4rem 2rem 0 5rem;
+}
+
+.info__body--dongxe {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.4em;
+  color: #707070;
+  margin-bottom: 30px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  font-family: "Mulish";
+}
+
+.info__body--slogan {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: #1f2125;
+  margin-bottom: 20px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.info__body--body {
+  position: relative;
+  left: 0;
+}
+
+.info__body--desc {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1f2125;
+  padding-left: 15px;
+  position: relative;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  margin-bottom: 15px;
+}
+
+img {
+  margin-top: 3rem;
+}
+/*# sourceMappingURL=block3.css.map */

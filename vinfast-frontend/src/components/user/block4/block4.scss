@@ -1,0 +1,143 @@
+@use "../../../scss" as *;
+
+.block4 {
+  &__title {
+    font-style: normal;
+    font-weight: 300;
+    line-height: 4.4rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: $black;
+    margin: 0;
+    padding: 5rem 0;
+    border-top: 1px #dadada solid;
+
+    @include mobile-xs {
+      font-size: 2.4rem;
+      letter-spacing: 0;
+    }
+
+    @include tablet-md {
+      font-size: 2.4rem;
+      letter-spacing: 0.345em;
+    }
+
+    @include tablet-lg {
+      font-size: 3.5rem;
+    }
+  }
+  .swiper-container {
+    background-image: url("http://localhost:3000/images/vinfast-data-01/bg_xe_may_slide.webp");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: top;
+    height: auto;
+    transition: 0.3s;
+    padding-bottom: 3rem;
+
+    .swiper-slide {
+      height: auto;
+      position: relative;
+
+      &:not(:last-child) {
+        .info__body::before {
+          content: "";
+          width: 1px;
+          height: 25rem;
+          border-right: 1px #d9d9d9 solid;
+          top: 0;
+          right: 0;
+          position: absolute;
+        }
+      }
+    }
+    .info {
+      .img {
+        .name {
+          @include flex(center, center);
+          font-style: normal;
+          font-weight: 600;
+          font-size: 2rem;
+          line-height: 2.4rem;
+          text-align: center;
+          color: $black;
+          margin-bottom: 4rem;
+        }
+      }
+
+      &__body {
+        padding: 0 50px;
+        position: relative;
+
+        &--slogan {
+          font-style: normal;
+          font-weight: bold;
+          font-size: 1.6rem;
+          line-height: 2.4rem;
+          color: $black;
+          margin-bottom: 2rem;
+          min-height: 4.5rem;
+        }
+
+        &--descs {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 1.6rem;
+          line-height: 120%;
+          color: $black;
+          white-space: break-spaces;
+        }
+
+        &--desc {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 1.6rem;
+          line-height: 2.4rem;
+          color: $black;
+          padding-left: 1.5rem;
+          position: relative;
+          transition: 0.3s;
+          margin-bottom: 1.5rem;
+
+          &::before {
+            content: "•";
+            top: 0;
+            left: 0;
+            position: absolute;
+          }
+        }
+      }
+    }
+  }
+
+  .swiper-pagination {
+    text-align: unset;
+    @include flex(center, center);
+  }
+
+  .swiper-pagination-bullet {
+    opacity: 1;
+  }
+
+  .swiper-container-horizontal
+    > .swiper-pagination-bullets
+    .swiper-pagination-bullet {
+    margin-right: 2rem;
+  }
+
+  .swiper-pagination-bullet-active {
+    position: relative;
+  }
+
+  .swiper-pagination-bullet-active::before {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border: 1px solid $blue;
+    border-radius: 50%;
+    color: $blue;
+    top: -4px;
+    right: -4px;
+  }
+}

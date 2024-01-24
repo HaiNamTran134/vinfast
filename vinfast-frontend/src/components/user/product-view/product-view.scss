@@ -1,0 +1,156 @@
+@use "../../../scss/" as *;
+
+#product {
+  .swiper-wrapper {
+    flex-direction: column;
+  }
+
+  .group__button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    border: 2px solid $blue;
+    bottom: -2rem;
+    transition: 0.3s all ease;
+    border-radius: $border-radius;
+
+    @include mobile-xs {
+      position: unset;
+      width: 100%;
+      margin-top: 2rem;
+    }
+
+    @include pc {
+      position: relative;
+    }
+
+    &:hover {
+      background-color: $blue;
+
+      a {
+        color: $white;
+      }
+    }
+
+    a {
+      padding: 2rem 4.5rem;
+      font-size: 1.6rem;
+      font-weight: 600;
+      line-height: 127%;
+      text-transform: uppercase;
+      color: $blue;
+    }
+  }
+}
+
+.president {
+  &__wrap {
+    &__info {
+      &--group {
+        @include flex(center, space-around);
+        margin: 0 auto;
+
+        @include mobile-xs {
+          width: 100%;
+        }
+
+        @include pc {
+          width: 60%;
+        }
+        .parameter {
+          @include mobile-xs {
+            font-size: 14px;
+            text-align: center;
+          }
+          position: relative;
+          color: $white;
+          @include flex(center, unset);
+          flex-direction: column;
+
+          font-size: 2rem;
+          font-weight: 600;
+          line-height: 127%;
+          text-transform: uppercase;
+          padding: 1rem;
+
+          span {
+            font-size: 1.6rem;
+          }
+
+          &:not(:last-child):before {
+            @include mobile-xs {
+              right: 0;
+            }
+
+            @include pc {
+              right: -42px;
+            }
+            content: "";
+            position: absolute;
+            width: 1px;
+            height: 100%;
+            background-color: $white;
+            top: -2px;
+          }
+        }
+      }
+
+      &--bottom {
+        background-color: $white;
+
+        @include mobile-xs {
+          padding: 5rem 1.5rem;
+        }
+
+        @include tablet-lg {
+          padding: 5rem 0;
+        }
+        .l-5 {
+          .group-title {
+            text-transform: uppercase;
+
+            h3 {
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 127%;
+            }
+            h2 {
+              font-weight: 400;
+              font-size: 36px;
+              line-height: 127%;
+            }
+          }
+        }
+
+        .l-7 {
+          position: relative;
+          font-size: 12px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
+
+.group__title {
+  h3 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 2.2rem;
+    color: $black;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    padding-right: 5rem;
+    margin: 1rem 0;
+    font-size: 3.2rem;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 3.8rem;
+    color: $black;
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,197 @@
+@use "../../scss/" as *;
+
+.form {
+  margin: 0 auto;
+  margin-top: 7rem;
+  width: 32.6rem;
+  margin-bottom: 4rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  position: relative;
+  input {
+    width: 100%;
+    height: 4rem;
+    font-size: 1.3rem;
+    padding: 0 1.5rem;
+    border: 2px solid #d9e1e2;
+    border-radius: 4px;
+    opacity: 0.8;
+    font-weight: 600;
+    color: $black;
+
+    &:focus {
+      border: 2px solid #1464f4;
+      box-sizing: border-box;
+      box-shadow: 0px 0px 0px 3.2px rgb(0 123 255 / 25%);
+    }
+  }
+
+  .password {
+    &__show {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      z-index: 1;
+      cursor: pointer;
+      .icon__show::before {
+        content: "";
+        display: block;
+        background: url(http://localhost:3000/images/icons/eye-show.png)
+          no-repeat center;
+        background-size: 100%;
+        width: 2.2rem;
+        height: 1.5rem;
+      }
+
+      .icon__hide::before {
+        content: "";
+        display: block;
+        background: url(http://localhost:3000/images/icons/eye-hide.png)
+          no-repeat center;
+        background-size: 100%;
+        width: 2.2rem;
+        height: 1.5rem;
+      }
+    }
+  }
+}
+
+.sign__in {
+  &--title {
+    font-size: 2.8rem;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 3.5rem;
+    color: $black;
+    margin-bottom: 4rem;
+  }
+}
+
+.remember {
+  margin-top: 1rem;
+  background-color: #fff;
+  @include flex(unset, space-between);
+  .form-group {
+    margin-bottom: 3rem;
+    position: relative;
+
+    input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+      position: absolute;
+    }
+
+    .checkmark-box {
+      position: absolute;
+      top: 4px;
+      left: 0px;
+      height: 1.6rem;
+      width: 1.6rem;
+      border: 1px solid #ccc;
+      border-radius: 2px;
+
+      &::before {
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 4px;
+        width: 3px;
+        height: 7px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        transform: rotate(45deg);
+        display: none;
+      }
+    }
+
+    input:checked ~ .checkmark-box {
+      background-color: $blue;
+    }
+
+    input:checked ~ .checkmark-box::before {
+      display: block;
+    }
+
+    .save__pass {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 1.3rem;
+      line-height: 2.4rem;
+      color: #1f2125;
+      position: relative;
+      margin-bottom: 0;
+      padding-left: 2.4rem;
+      vertical-align: top;
+    }
+  }
+
+  .password__reset {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.3rem;
+    line-height: 2.4rem;
+    color: #707070;
+    cursor: pointer;
+
+    &:hover {
+      color: $blue;
+    }
+  }
+}
+
+.submit {
+  @include flex(center, center);
+
+  button {
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 2rem;
+    color: $white;
+    padding: 8px;
+    width: 100%;
+    background-color: #1464f4;
+    cursor: pointer;
+    border-radius: $border-radius;
+    border: none;
+
+    &:disabled {
+      background-color: #979797;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.no__account {
+  @include flex(center, center);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  color: #707070;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.btn__sign__up {
+  @include flex(center, center);
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 2rem;
+  color: #1464f4;
+  padding: 8px;
+  width: 100%;
+  border: 1px solid #1464f4;
+  border-radius: $border-radius;
+  transition: all 0.4s ease;
+
+  &:hover {
+    background-color: #1464f4;
+    a {
+      color: $white;
+      cursor: default;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@use "../../../scss/" as *;
+
+.badge {
+  padding: 6px 1rem;
+  color: $white;
+  border-radius: 1rem;
+  box-shadow: $box-shadow;
+
+  &-danger {
+    background-color: #26e7a6;
+  }
+
+  &-success {
+    background-color: #26a0fc;
+  }
+
+  &-primary {
+    background-color: $blue;
+  }
+
+  &-warning {
+    background-color: #febc3b;
+  }
+}

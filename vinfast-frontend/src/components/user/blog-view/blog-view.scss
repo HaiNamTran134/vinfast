@@ -1,0 +1,62 @@
+@use "../../../scss/" as *;
+
+.blog {
+  margin-top: 7rem;
+
+  &__header {
+    margin-bottom: 2rem;
+    padding: 0 1.5rem;
+    .l-6 {
+      ul {
+        @include flex(center, flex-start);
+        margin-right: 2rem;
+        border-bottom: 1px solid #707070;
+
+        li {
+          font-size: 1.3rem;
+          font-weight: 600;
+          color: $black;
+          opacity: 0.8;
+          margin-right: 3rem;
+          padding-top: 1rem;
+          padding-bottom: 1rem;
+
+          &:hover {
+            opacity: 1;
+            cursor: pointer;
+          }
+
+          &.active {
+            color: $blue;
+            border-bottom: 2px solid $blue;
+          }
+        }
+      }
+    }
+    &__right {
+      border: 1px solid #707070;
+      border-radius: $border-radius;
+      @include flex(center, space-around);
+
+      input {
+        height: 3rem;
+
+        &:first-child {
+          width: 37rem;
+        }
+
+        &:last-child {
+          width: 16.5rem;
+          font-weight: 600;
+          font-size: 1.3rem;
+          line-height: 16.51px;
+          text-align: center;
+          color: #fff;
+          background-color: #2c72c6;
+          border-radius: $border-radius;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}

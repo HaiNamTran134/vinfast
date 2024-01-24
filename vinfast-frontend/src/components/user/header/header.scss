@@ -1,0 +1,302 @@
+@use "../../../scss/" as *;
+
+.header {
+  @include mobile-xs {
+    position: unset;
+    height: 5rem;
+  }
+
+  @include tablet-lg {
+    &.isCheckheader {
+      background-color: $white;
+      box-shadow: $box-shadow;
+    }
+    width: 100%;
+    height: $header-height;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    transition: all 0.3 ease, background-color 0.3s ease;
+  }
+
+  &__wrap {
+    @include flex(center, space-between);
+
+    margin-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    padding: 0 2rem;
+
+    @include tablet-lg {
+      max-width: 992px;
+    }
+
+    @include pc {
+      max-width: 144rem;
+    }
+  }
+
+  &__left {
+    @include flex(center, unset);
+
+    &--logo {
+      width: 4.5rem;
+      height: 4.5rem;
+      margin-right: 2rem;
+    }
+
+    &--nav {
+      @include mobile-xs {
+        display: none;
+      }
+
+      @include tablet-lg {
+        @include flex(center, space-between);
+      }
+
+      li {
+        a {
+          font-size: 1.3rem;
+          font-weight: 600;
+          padding: 2rem 1.5rem;
+          color: $black;
+
+          &:hover {
+            background-color: rgba(44, 114, 198, 0.1);
+            color: $blue;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  &__right {
+    @include flex(center, center);
+    .account {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 4rem;
+        width: 100%;
+        height: 2rem;
+      }
+
+      &:hover {
+        .account__list {
+          animation-name: example;
+          animation-duration: 0.2s;
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+
+      &__list {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        top: 5.8rem;
+        left: 0;
+        min-width: 30rem;
+        background: $white;
+        box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+        border-radius: 3rem;
+        overflow: hidden;
+        border-radius: $border-radius;
+        transition: transform 0.2s ease 0s;
+
+        li {
+          font-size: 1.3rem;
+          font-weight: 600;
+          font-style: normal;
+          line-height: 150%;
+
+          a {
+            display: block;
+            padding: 1rem;
+          }
+
+          &:hover {
+            background-color: rgba(44, 114, 198, 0.1);
+            color: $blue;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    &--account {
+      @include flex(center, unset);
+      font-size: 1.3rem;
+      font-weight: 600;
+      padding: 5px;
+      color: $black;
+      transition: all 0.3s;
+      cursor: pointer;
+
+      img {
+        margin-right: 1rem;
+        width: 35px;
+        border-radius: 50%;
+      }
+
+      @include tablet-lg {
+        @include flex(center, space-between);
+      }
+
+      &:hover {
+        border-radius: $border-radius;
+        background-color: rgba(44, 114, 198, 0.1);
+        color: $blue;
+      }
+    }
+
+    &--region {
+      width: 6.4rem;
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-left: 8px;
+      padding: 0.8rem;
+      border-radius: $border-radius;
+
+      @include flex(center, space-between);
+
+      &:hover {
+        background-color: rgba(44, 114, 198, 0.1);
+        color: $blue;
+        cursor: pointer;
+      }
+    }
+
+    .vertical-line {
+      width: 1px;
+      height: 3rem;
+      background-color: #dbe1e3;
+      margin: 0 1.5rem;
+    }
+
+    &--menu {
+      position: relative;
+      padding: 1.3rem;
+      border-radius: $border-radius;
+      transition: 0.6s all ease;
+      // overflow: hidden;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 4rem;
+        width: 4.6rem;
+        height: 2rem;
+      }
+
+      &:hover {
+        background-color: rgba(44, 114, 198, 0.1);
+        cursor: pointer;
+
+        span {
+          border-bottom: 2px $blue solid;
+        }
+
+        .slidebar__right {
+          animation-name: example;
+          animation-duration: 0.2s;
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+
+      .nav__icon__region {
+        width: 2rem;
+        height: 1.4rem;
+        // padding: 1.5rem;
+        position: relative;
+        cursor: pointer;
+
+        span {
+          position: absolute;
+          width: 100%;
+          height: 0;
+          border-bottom: 2px $black solid;
+          opacity: 1;
+          left: 0;
+        }
+
+        span:nth-child(1) {
+          top: 0;
+        }
+
+        span:nth-child(2) {
+          top: 0.6rem;
+        }
+
+        span:nth-child(3) {
+          bottom: 0;
+        }
+      }
+
+      .slidebar__right {
+        visibility: hidden;
+        position: fixed;
+        padding: 1rem;
+        min-width: 30rem;
+        top: 7rem;
+        right: 0;
+        background: $white;
+        box-shadow: $box-shadow;
+        border-radius: $border-radius;
+        z-index: 100;
+        li {
+          font-size: 1.4rem;
+          font-weight: 600;
+          font-style: normal;
+          line-height: 150%;
+          padding: 1rem;
+
+          &:hover {
+            background-color: rgba(44, 114, 198, 0.1);
+            color: $blue;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+.click__top {
+  width: 3.8rem;
+  height: 3.8rem;
+  box-shadow: $box-shadow;
+  background-color: $white;
+  position: fixed;
+  bottom: 5%;
+  right: 2%;
+  background-image: url("http://localhost:3000/images/arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1.6rem 1.6rem;
+  border-radius: 50%;
+  transform: rotate(270deg);
+  z-index: 100;
+  // display: none;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@keyframes example {
+  from {
+    transform: translateY(-7rem);
+    visibility: hidden;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

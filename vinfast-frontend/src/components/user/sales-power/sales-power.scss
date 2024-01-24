@@ -1,0 +1,155 @@
+@use "../../../scss/" as *;
+
+.sales__power {
+  margin-top: 3rem;
+  position: relative;
+  background-color: #f5faff;
+  background-image: linear-gradient(#fff 20%, #f5faff 30%);
+
+  h3 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    color: $black;
+    text-transform: uppercase;
+  }
+
+  .img ~ .container {
+    background-color: #fff;
+  }
+
+  .container {
+    padding: 1.5rem;
+
+    .sales__power__hot,
+    .sales__power__new {
+      padding: 2rem;
+      &--price {
+        @include flex(center, space-between);
+        flex-wrap: wrap;
+        padding: 2rem 2rem 0 2rem;
+        font-size: 2.2rem;
+        font-weight: 600;
+        font-style: normal;
+        line-height: 150%;
+        border-bottom: 1px solid #707070;
+        background-color: $white;
+        h4 {
+          flex: 0 0 50%;
+          // text-transform: uppercase;
+          color: $black;
+        }
+
+        .price {
+          text-align: end;
+          flex: 0 0 50%;
+          // text-transform: uppercase;
+          color: $blue;
+        }
+        .vnd {
+          margin-left: 8px;
+          font-size: 1.2rem;
+          color: $gray;
+        }
+
+        .desc {
+          color: $black;
+          font-size: 1.2rem;
+          font-weight: 400;
+        }
+      }
+
+      &--endow {
+        @include flex(center, space-between);
+        padding: 2rem;
+        font-size: 1.5rem;
+        font-weight: 600;
+        line-height: 2.2rem;
+        color: $black;
+        background-color: $white;
+      }
+
+      .buy {
+        width: 60%;
+        margin: 2rem auto;
+        .btn {
+          width: 100%;
+          height: 4rem;
+          font-size: 14px;
+          font-weight: 400;
+          color: $white;
+          background-color: $blue;
+          text-transform: uppercase;
+          border: none;
+
+          &:hover {
+            opacity: 0.8;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .sales__power__hot {
+      &--price {
+        border-bottom: none;
+      }
+
+      h4 {
+        margin-bottom: 1.5rem;
+      }
+
+      .btn {
+        margin: 0 auto;
+      }
+
+      .desc {
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      .power-text {
+        font-weight: 400;
+      }
+
+      .swiper-button-prev,
+      .swiper-button-next {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background-color: $blue;
+        border-radius: 50%;
+        background-image: url("http://localhost:3000/images/arrow-product.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        &::after {
+          content: "";
+        }
+      }
+
+      .swiper-button-prev {
+        transform: rotate(180deg);
+        left: 10rem;
+      }
+
+      .swiper-button-next {
+        right: 10rem;
+      }
+    }
+  }
+}
+
+.product {
+  position: relative;
+  background-color: #f5faff;
+  padding-bottom: 5rem;
+  max-width: 144rem;
+  left: 50%;
+  transform: translateX(-50%);
+  .swiper-container {
+    position: unset;
+  }
+}

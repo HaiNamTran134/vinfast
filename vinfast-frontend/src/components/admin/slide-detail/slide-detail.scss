@@ -1,0 +1,30 @@
+@use "../../../scss/" as *;
+
+.form__account__detail,
+.form__product__detail {
+  align-items: center;
+}
+
+.public__detail {
+  .btn {
+    @include flex(center, space-between);
+
+    button {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+      padding: 1rem;
+      border: none;
+      border-radius: $border-radius;
+      background: none;
+      text-transform: uppercase;
+      cursor: pointer;
+      color: $white;
+      background: $blue;
+
+      &:last-child {
+        background: #c70000;
+      }
+    }
+  }
+}

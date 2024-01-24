@@ -1,0 +1,234 @@
+@use "../../../scss/" as *;
+
+.my__account {
+  margin-top: 3rem;
+
+  &__info {
+    @include flex(center, flex-start);
+    margin-left: 2rem;
+
+    h1 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      line-height: 140%;
+      color: $black;
+      padding: 5px 1rem;
+    }
+
+    &--edit {
+      width: 3.5rem;
+      height: 3.5rem;
+      padding: 1rem;
+      border: 1px solid #dedede;
+      border-radius: 4px;
+    }
+  }
+
+  &__body {
+    margin-left: 2rem;
+    background: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 2rem;
+    // overflow-y: scroll;
+    // height: 300px;
+    .row {
+      margin: 0;
+      padding: 5px 1rem;
+    }
+
+    .personal {
+      border-bottom: 1px solid #dedede;
+      padding: 2.5rem 1.5rem;
+    }
+
+    .password {
+      padding: 2.5rem 1.5rem;
+    }
+
+    &__left {
+      padding: 1.5rem;
+
+      .note {
+        margin-bottom: 4rem;
+        p {
+          font-size: 1.1rem;
+          font-weight: 500;
+          line-height: 140%;
+          color: $black;
+          margin-bottom: 1rem;
+
+          span {
+            color: red;
+            font-weight: 600;
+          }
+        }
+      }
+
+      h2.title {
+        padding: 1.5rem 0;
+        border-bottom: 1px solid #ccc;
+      }
+
+      .order__detail {
+        margin-top: 2rem;
+        th,
+        td {
+          text-transform: none;
+          text-align: left;
+          padding: 5px;
+          border: none;
+          span {
+            font-size: 1.2rem;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+
+    &__right {
+      border: 1px solid #ccc;
+      margin-top: 2rem;
+    }
+  }
+
+  &__form {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+
+    .title {
+      margin-bottom: 3rem;
+      font-size: 2rem;
+      font-weight: 500;
+    }
+
+    .row {
+      align-items: center;
+    }
+    .form {
+      width: 35rem;
+      background: $white;
+
+      &.showFormInfo {
+        width: 56rem;
+      }
+
+      .content {
+        max-width: 50rem;
+        margin: 0 auto;
+        padding: 3rem;
+
+        label {
+          padding: 0 1rem;
+          font-size: 13px;
+          font-weight: 500;
+        }
+
+        .l-8 {
+          padding: 0 1rem;
+
+          input {
+            opacity: 1;
+
+            &:disabled {
+              background: #979797;
+            }
+          }
+
+          button {
+            background: $blue;
+            color: $white;
+            width: 100%;
+            border: none;
+          }
+        }
+
+        button {
+          padding: 1rem 4rem;
+          border: 1px solid #707070;
+          border-radius: $border-radius;
+          font-weight: 500;
+          text-transform: uppercase;
+
+          &:hover {
+            cursor: pointer;
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+  }
+}
+
+.btn-edit {
+  border: none;
+  background: unset;
+  font-family: "Montserrat", sans-serif;
+  color: $blue;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+#register__success {
+  display: none;
+  height: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  background: $white;
+  border-radius: 3px;
+  padding: 30px;
+
+  .close__form {
+    cursor: pointer;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+
+  .logo {
+    background: url(http://localhost:3000/logo-header.svg) 0 0 no-repeat;
+    width: 80px;
+    height: 80px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .desc-1 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.2rem;
+    line-height: 2.8rem;
+    color: $blue;
+    margin: 4rem 0 3rem;
+  }
+
+  .desc-2 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 150%;
+    color: $black;
+  }
+
+  .hotline {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 150%;
+    color: $black;
+    margin-top: 3rem;
+  }
+}
+
+#register__success.showForm {
+  display: block;
+}

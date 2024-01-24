@@ -1,0 +1,60 @@
+@use "../../../scss/" as *;
+
+#president-04 {
+  .president__wrap {
+    img {
+      //   height: 74%;
+    }
+
+    .container {
+      width: 85%;
+      margin: 0 auto;
+
+      p {
+        font-size: 1.3rem;
+        color: #1a1a1a;
+      }
+
+      ul {
+        @include mobile-xs {
+          max-height: 20rem;
+          overflow-y: scroll;
+          margin-top: 2rem;
+          width: 100%;
+        }
+
+        @include tablet-lg {
+          max-height: 100%;
+          overflow-y: unset;
+          margin-top: 0;
+          width: 100%;
+        }
+      }
+
+      li {
+        font-size: 1.2rem;
+        font-weight: 600;
+        line-height: 1.8rem;
+        font-style: normal;
+        padding: 5px 0;
+        margin: 1.2rem 0;
+        border-bottom: 1px solid #707070;
+        color: $black;
+
+        &:hover {
+          cursor: pointer;
+          color: $blue;
+        }
+
+        &.active {
+          border-bottom: 1px solid $blue;
+          color: $blue;
+
+          &:hover {
+            cursor: default;
+          }
+        }
+      }
+    }
+  }
+}

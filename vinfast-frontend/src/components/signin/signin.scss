@@ -1,0 +1,79 @@
+@use "../../scss" as *;
+
+.password-require {
+  p {
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 1.6rem;
+    font-style: normal;
+    color: $black;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .below-desc {
+    margin-bottom: 3rem;
+    padding-left: 1.5rem;
+    li {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 1.3rem;
+      line-height: 1.6rem;
+      color: #707070;
+      margin-left: 1rem;
+      padding: 5px;
+
+      span {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.3rem;
+        line-height: 1.6rem;
+        color: #707070;
+        margin-left: 1rem;
+      }
+
+      &::before {
+        content: "";
+        margin-left: -22px;
+        display: inline-block;
+        height: 11px;
+        width: 14px;
+        background-image: url("http://localhost:3000/images/icons/unmark.png");
+      }
+    }
+  }
+}
+
+.policy {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  color: #707070;
+  margin-bottom: 3rem;
+
+  a {
+    text-decoration: underline;
+    color: #2c72c6;
+  }
+}
+
+.form-message {
+  width: 100%;
+  margin-top: 8px;
+  font-size: 1.3rem;
+  color: #dc3545;
+}
+
+.form-group input.check {
+  border: 1px solid #dc3545;
+}
+
+.password-require .below-desc li.checkCase {
+  span {
+    color: $blue;
+  }
+  &::before {
+    background-image: url("http://localhost:3000/images/icons/checkCharacter.svg");
+  }
+}

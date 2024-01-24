@@ -1,0 +1,135 @@
+@use "../../../scss/" as *;
+
+.block2 {
+  margin-top: 8rem;
+
+  .swiper-container {
+    padding-bottom: 3rem;
+  }
+
+  &__title {
+    margin-bottom: 5rem;
+    h2 {
+      @include mobile-xs {
+        font-size: 3rem;
+      }
+
+      @include tablet-md {
+        font-size: 5.4rem;
+      }
+      font-weight: 200;
+      line-height: 7rem;
+      text-align: center;
+    }
+  }
+
+  &__item {
+    max-width: 387px;
+    margin: auto;
+
+    @include mobile-xs {
+      padding: 0 5rem;
+    }
+
+    @include tablet-md {
+      padding: 0;
+    }
+
+    &__quote {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+      text-align: center;
+      color: $black;
+      margin-bottom: 2rem;
+      position: relative;
+    }
+
+    &__author {
+      font-weight: 600;
+      font-size: 16px;
+      text-align: center;
+    }
+  }
+
+  .swiper-slide {
+    opacity: 0.4;
+  }
+  .swiper-slide-active {
+    opacity: 1;
+
+    .block2__item__quote {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 2.5rem;
+        height: 2.5rem;
+        background-image: url(http://localhost:3000/images/vinfast/quote_1.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        @include mobile-xs {
+          left: -4rem;
+        }
+
+        @include tablet-md {
+          left: -7rem;
+        }
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 2.5rem;
+        height: 2.5rem;
+        background-image: url("http://localhost:3000/images/vinfast/quote_2.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        @include mobile-xs {
+          right: -4rem;
+        }
+
+        @include tablet-md {
+          right: -7rem;
+        }
+      }
+    }
+  }
+
+  .swiper-pagination {
+    text-align: center;
+    @include flex(center, center);
+  }
+
+  .swiper-pagination-bullet {
+    opacity: 1;
+  }
+
+  .swiper-container-horizontal
+    > .swiper-pagination-bullets
+    .swiper-pagination-bullet {
+    margin-right: 2rem;
+  }
+
+  .swiper-pagination-bullet-active {
+    position: relative;
+  }
+
+  .swiper-pagination-bullet-active::before {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #2c72c6;
+    border-radius: 50%;
+    color: #2c72c6;
+    top: -4px;
+    right: -4px;
+  }
+}

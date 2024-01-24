@@ -1,0 +1,12 @@
+[
+    {"id":1,"name":"VF e34","description":"Cùng bạn bứt phá mọi giới hạn","count": "50","image":"/static/media/VFe34_1624348575.931034ba.webp","price":"690.000.000đ","action":"edit"},
+    {"id":2,"name":"LUX-SA","description":"Chinh phục mọi con đường","count": "50","image":"/static/media/LuxSA_1624348590.564a23b3.webp","price":"1.026.165.000đ","action":"edit"},
+    {"id":3,"name":"LUX-A","description":"Tận hưởng từng khoảnh khắc","count": "50","image":"/static/media/LuxA_1624348606.4722fa9d.webp","price":"881.695.000đ","action":"edit"},
+    {"id":4,"name":"Fadil","description":"Tối ưu mọi trải nghiệm","count": "50","image":"/static/media/Fadil_1624348615.15be2e8b.webp","price":"382.500.000đ","action":"edit"},
+    {"id":5,"name":"Predent","description":"Dấu ấn người thủ lĩnh","count": "50","image":"/static/media/president.e7ad79d6.webp","price":"3.800.000.000đ","action":"edit"},
+    {"id":6,"name":"Theon","description":"Công nghệ bứt phá trải nghiệm đỉnh cao","count": "50","image":"/static/media/Theon_1624348475.53abceaf.webp","price":"63.900.000đ","action":"edit"},
+    {"id":7,"name":"Feliz","description":"Sống xanh thanh lịch","count": "50","image":"/static/media/Feliz_1624348483.676dfc46.webp","price":"24.900.000đ","action":"edit"},
+    {"id":8,"name":"Klara S","description":"Khởi đầu phong cách mởi","count": "50","image":"/static/media/KlaraS_1624348494.cc3a3daf.webp","price":"39.900.000đ","action":"edit"},
+    {"id":9,"name":"Impes","description":"Tỏa chất riêng - bật cá tính","count": "50","image":"/static/media/Impes_1624348519.df0671fa.webp","price":"14.900.000đ","action":"edit"},
+    {"id":10,"name":"Ludo","description":"Dáng sành điệu kiểu chất chơi","count": "50","image":"/static/media/Ludo_1624348528.6701227d.webp","price":"12.900.000đ","action":"edit"}
+]

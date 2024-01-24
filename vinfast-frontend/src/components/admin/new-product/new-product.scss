@@ -1,0 +1,78 @@
+@use "../../../scss/" as *;
+
+.new__product {
+  &--top {
+    @include flex(center, space-between);
+
+    .btn {
+      margin-bottom: 4rem;
+
+      button {
+        font-size: 1.2rem;
+        font-weight: 600;
+        padding: 1rem;
+        border: none;
+        border-radius: $border-radius;
+        background: none;
+        text-transform: uppercase;
+        cursor: pointer;
+        color: $blue;
+
+        &:nth-child(2) {
+          color: $white;
+          background: $blue;
+        }
+      }
+    }
+  }
+}
+.form__create {
+  padding: 2rem 1rem;
+  background: #fff;
+
+  .form-group {
+    position: relative;
+    margin: 1rem 2rem;
+
+    input {
+      opacity: 1;
+    }
+
+    .label {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #999;
+      position: absolute;
+      top: 10px;
+      left: 12px;
+      pointer-events: none;
+      user-select: none;
+      transition: all 0.3s ease;
+    }
+
+    input:not([type="file"]) {
+      font-size: 1.6rem;
+      border: 2px solid #707070;
+      padding: 1rem;
+      width: 100%;
+      border-radius: $border-radius;
+
+      &:not(:placeholder-shown),
+      &:focus {
+        border: 2px solid #1464f4;
+        box-sizing: border-box;
+        box-shadow: none;
+
+        & ~ .label {
+          color: #1464f4;
+          font-size: 1rem;
+          top: -7px;
+          left: 20px;
+          padding: 0 1rem;
+          display: inline-block;
+          background: $white;
+        }
+      }
+    }
+  }
+}

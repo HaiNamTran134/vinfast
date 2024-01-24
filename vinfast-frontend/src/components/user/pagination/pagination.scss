@@ -1,0 +1,37 @@
+@use "../../../scss/" as *;
+
+.row-wrapper {
+  margin-top: 2rem;
+}
+
+.row__pagination {
+  width: 100%;
+  margin-top: 2rem;
+
+  @include flex(center, flex-end);
+
+  &-item ~ item {
+    margin-left: 1rem;
+  }
+
+  &-item {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    cursor: pointer;
+
+    @include flex(center, center);
+
+    &.active,
+    .active:hover {
+      background-color: $main-color;
+      color: $white;
+      font-weight: 600;
+    }
+
+    &:hover {
+      color: $white;
+      background-color: $second-color;
+    }
+  }
+}
